@@ -2,16 +2,23 @@
 <html xmls:th="http://www.thymeleaf.org">
 <head th:fragment="head">
 <meta charset="utf-8">
-<title>Control de Productos</title>
+<title>LOGIN</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
+	<style>
+		.navbar-brand {
+		  text-align: center;
+		  display: block; /* para que el ancho sea del contenido */
+		  margin: 0 auto; /* para centrar horizontalmente */
+		}
+	  </style>
 </head>
-<body>
+<body style="background-color: #770080;">
 	<header th:fragment="header">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="/login">Control de productos</a>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: #770080;">
+			<a class="navbar-brand" href="/login" >AUTENTTICACION</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarNav" aria-controls="navbarNav"
 				aria-expanded="false" aria-label="Toggle navigation">
@@ -19,8 +26,8 @@
 			</button>
 		</nav>
 	</header>
-	<section class="vh-100" style="background-color: #508bfc;">
-		<div class="container py-5 h-100">
+	<section class="vh-100" style="background-color: #770080;">
+		<div class="container py-5 h-5">
 			<div
 				class="row d-flex justify-content-center align-items-center h-100">
 				<div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -63,7 +70,7 @@
 										class="form-label" for="typePasswordX-2">Password</label>
 								</div>
 
-								<button class="btn btn-primary btn-lg btn-block" type="submit">Iniciar
+								<button class="btn btn-primary btn-lg btn-block" type="submit" style="background-color: #380064" > Iniciar
 									sesión</button>
 
 							</form>

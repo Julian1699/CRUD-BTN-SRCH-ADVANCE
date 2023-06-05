@@ -39,7 +39,7 @@ public class ProductoControlador {
 		return "nuevo_producto";
 	}
 	
-	@PostMapping(value = "/guardar")
+	@PostMapping("/guardar")
 	public String guardarProducto(@ModelAttribute("producto") Producto producto) {
 		productoServicio.save(producto);
 		return "redirect:/";
@@ -53,7 +53,7 @@ public class ProductoControlador {
 		return modelo;
 	}
 
-	@RequestMapping("/eliminar/{id}")
+	@GetMapping("/eliminar/{id}")
 	public String eliminarProducto(@PathVariable(name="id")Long id) {
 		productoServicio.delete(id);
 		return "redirect:/";
@@ -66,7 +66,6 @@ public class ProductoControlador {
 			flash.addFlashAttribute("error", "El producto no existe en la base de datos");
 			return "redirect:/index";
 		}
-		
 		modelo.put("producto",producto);
 		modelo.put("titulo", "Detalles del producto " + producto.getNombre());
 		return "ver";

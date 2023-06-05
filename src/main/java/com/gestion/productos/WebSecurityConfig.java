@@ -24,18 +24,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	@Bean
 	protected UserDetailsService userDetailsService() {
+
 		UserDetails usuario1 = User
-				.withUsername("usuario")
-				.password("$2a$10$21k9QLX0vdSytZ36T56yHeDwn2y6DiHdJ2k7fCzccV7CuskmNQmEq")
-				.roles("USER")	
-				.build();
-		
-		UserDetails usuario2 = User
 				.withUsername("admin")
-				.password("$2a$10$21k9QLX0vdSytZ36T56yHeDwn2y6DiHdJ2k7fCzccV7CuskmNQmEq")
+				.password("$2a$10$3htRjXpI1cuCREcfWSTtNOa0vDff97.qovEaV4dAWBL7KZIiY.pE.")
 				.roles("ADMIN")	
 				.build();
-		
+		UserDetails usuario2 = User
+				.withUsername("usuario")
+				.password("$2a$10$3htRjXpI1cuCREcfWSTtNOa0vDff97.qovEaV4dAWBL7KZIiY.pE.")
+				.roles("USER")	
+				.build();
 		return new InMemoryUserDetailsManager(usuario1,usuario2);
 	}
 	
