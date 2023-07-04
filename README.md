@@ -1,4 +1,4 @@
-# CRUD-BTN-SRCH-AUTOMOTRIZ - Gestión de productos del sector automotriz utilizando Spring
+# Gestión de productos del sector automotriz utilizando SpringBoot
 
 Este proyecto desarrollado con Spring Boot, Spring Security, Spring Data JPA, Thymeleaf, entre otros, tiene como objetivo crear un CRUD que permita gestionar productos relacionados con el sector automotriz.
 
